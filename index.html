@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--  <meta http-equiv="refresh" content="2">  Hızlı kontrol etmek için kullandım -->
+    <title>Document</title>
+    <link rel="stylesheet" href="ag.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Basic bir navbar Belirli bir piksel altında katlanıyor.-->
+    <div id="headerDiv" class="header">
+        <div onclick="toggle()" class="mobileIcon">
+            <img src="icon.png" width="50px" height="50px" >
+                        
+        </div>
+        <div>
+            <img class="headerimg" src="1.jpg" width="32px" height="32px">
+        </div>
+        <div id="navDiv" class="mobileLinkDisplay">
+            <div class="mobileLink">
+                <a class="headerlink" href="">Anasayfa</a>
+                <a class="headerlink" href="">Hakkimizda</a>
+                <a class="headerlink" href="">İletişim</a>
+            </div>
+        </div>
+     </div>
+
+    <!-- Banner kısmım-->
+    <div class="bannerDiv">
+        <div class="banner">
+            <h3>Filmler</h3>
+            <br>
+            <p id="ag1p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sint, et reprehenderit incidunt ipsa
+            pariatur iste tempore dignissimos molestiae placeat amet at alias. Magni rerum quam enim voluptate
+            tempore quaerat!</p>
+        </div>
+    </div>
+
+    <!-- card kısmı -->
+
+    <div class="imgMaindiv">
+        <div class="imgDiv">
+            <img class="efso" src="4.jpg">
+            <h3>Film 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eligendi repellendus ab officia
+                eius
+                alias quos cupiditate ducimus? Mollitia iusto ratione, eligendi aperiam perspiciatis ipsa aliquam ad
+                tenetur
+                perferendis?
+            </p>
+                <center> 
+                    <button class="btn btn-info resim_button" id="resim_button">Detaylar</button>
+                </center>
+            </div>
+        <div class="imgDiv">
+            <img class="efso" src="3.jpg" >
+            <h3>Film2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eligendi repellendus ab officia
+                eius
+                alias quos cupiditate ducimus? Mollitia iusto ratione, eligendi aperiam perspiciatis ipsa aliquam ad
+                tenetur
+                perferendis?
+            </p>
+            <center> 
+                <button class="btn btn-info resim_button" id="resim_button">Detaylar</button>
+            </center>
+        </div>
+        <div class="imgDiv">
+            <img class="efso" src="2.jpg">
+            <h3>Film3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eligendi repellendus ab officia
+                eius
+                alias quos cupiditate ducimus? Mollitia iusto ratione, eligendi aperiam perspiciatis ipsa aliquam ad
+                tenetur
+                perferendis?
+            </p>
+                <center> 
+                    <button class="btn btn-info resim_button" id="resim_button">Detaylar</button>
+                </center>
+        </div>
+        <div class="imgDiv">
+            <img class="efso" src="1.jpg">
+            <h3>film4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eligendi repellendus ab officia
+                perferendis?
+            </p>
+
+            <center> 
+                    <button class="btn btn-info resim_button" id="resim_button">Detaylar</button>
+            </center>
+        </div>
+    </div>
+
+
+<!-- Form kısmım phpmailer kullanarak bilgilendirme maili göndermeyi amaçladım -->
+<div style="padding: 10px; background-color:#decbcb; border-radius:20px;"> 
+    <form  action="send.php" method="POST" class=" form-group">
+        <label>Ad Soyad</label>
+        <input class="form-control" type="text" required name="addd" placeholder="Adınızı ve soyadınızı giriniz">
+        <label>Email</label>
+        <input class="form-control" type="email" required name="email" placeholder="Emailinizi giriniz">
+        <input style="width:100%;margin-top:10px;" class="btn btn-dark" type="submit" value="Gönder">
+    </form>
+</div>
+    <div  class="footer">
+        <h3> Tüm Hakları saklıdır</h3>
+    </div>
+
+
+
+
+    <script>
+        function toggle() {
+            let x = document.getElementById("navDiv");
+            let y = document.getElementById("headerDiv");
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.height = "auto";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
